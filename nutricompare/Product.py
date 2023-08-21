@@ -7,7 +7,7 @@ class Product:
     price: float
     weight: float
     protein_per_hundred: float
-    cost_per_protein: float = field(init=False)
+    cost_per_macro: float = field(init=False)
 
     def __post_init__(self):
         self.set_cost_per_protein()
@@ -22,4 +22,4 @@ class Product:
         return self.price / self.weight
 
     def set_cost_per_protein(self):
-        self.cost_per_protein = self.product_cost_per_gram() * self.product_per_protein()
+        self.cost_per_macro = self.product_cost_per_gram() * self.product_per_protein()

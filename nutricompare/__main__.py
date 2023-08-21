@@ -8,7 +8,7 @@ def main(argv: list[str] = None):
 
     a = Product(name='', weight=total_g, protein_per_hundred=protein_per_hundred, price=price)
 
-    print(f"{a.cost_per_protein:2f} zł per 1g protein")
+    print(f"{a.cost_per_macro:2f} zł per 1g protein")
 
 
 if __name__ == '__main__':
