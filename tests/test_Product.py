@@ -17,6 +17,7 @@ def test_product_created():
     ({"name": "Cocktail", "price": 3.99, "weight": 250.0, "macro_per_hundred": 10.5}, "0.152"),
     ({"name": "Oats", "price": 4.99, "weight": 200.0, "macro_per_hundred": 9.5}, "0.263"),
     ({"name": "Protein Wafer", "price": 3.49, "weight": 46.0, "macro_per_hundred": 30.0}, "0.253"),
+    ({"name": "Giant Yoghurt", "price": 9.99, "weight": 1000.0, "macro_per_hundred": 7.9}, "0.126")
 ])
 def test_product_macro_efficiency_is_correctly_calculated(values, expected):
     prod = Product(**values)
