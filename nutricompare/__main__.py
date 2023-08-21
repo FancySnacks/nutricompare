@@ -1,4 +1,4 @@
-from protein_emperor.Product import Product
+from nutricompare.Product import Product
 
 
 def main(argv: list[str] = None):
