@@ -1,6 +1,6 @@
 ## TODO
 
-- [ ] Remote github repo setup -> pull > local to remote push
+- [x] Remote github repo setup -> pull > local to remote push
 - [ ] Add tests
 - [ ] pre-commit
 - [ ] List of products
