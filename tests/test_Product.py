@@ -1,6 +1,10 @@
 import pytest
 
 from nutricompare.Product import Product
+from nutricompare.const import TEST_PRODUCTS
+
+
+TEST_PRODUCTS = [Product(**kw) for kw in TEST_PRODUCTS]
 
 
 def test_product_created():

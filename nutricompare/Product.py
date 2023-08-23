@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 
 @dataclass(order=True)
 class Product:
+    sort_index: float = field(init=False, repr=False)
     name: str
     price: float
     weight: float
@@ -11,6 +12,7 @@ class Product:
 
     def __post_init__(self):
         self.set_cost_per_macro()
+        self.sort_index = self.cost_per_macro
 
     def total_macro(self) -> float:
         return (self.weight / 100) * self.macro_per_hundred
