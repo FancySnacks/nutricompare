@@ -4,7 +4,7 @@ from nutricompare.Product import Product
 from nutricompare.const import TEST_PRODUCTS
 
 
-TEST_PRODUCTS = [Product(**kw) for kw in TEST_PRODUCTS]
+PRODUCTS = [Product(**kw) for kw in TEST_PRODUCTS]
 
 
 def test_product_created():
@@ -27,3 +27,7 @@ def test_product_macro_efficiency_is_correctly_calculated(values, expected):
     prod = Product(**values)
     efficiency = f"{prod.cost_per_macro:.3f}"
     assert efficiency == expected
+
+
+def test_sort_products():
+    assert sorted(TEST_PRODUCTS) != TEST_PRODUCTS
